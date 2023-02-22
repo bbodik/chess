@@ -15,15 +15,16 @@ public class Panel extends JFrame{
                 if ((row + col) % 2 == 0) {
                     square.setBackground(Color.WHITE);
                 } else {
-                    square.setBackground(Color.BLACK);
+                    square.setBackground(Color.GRAY);
                 }
                 squares[row][col] = square;
                 add(square);
             }
         }
         setResizable(false);
-        setBounds(50, 50,500,500);
+        setBounds(50, 50,600,600);
         setVisible(true);
+        Pawn.createPawns(this);
     }
 
 }
