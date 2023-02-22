@@ -22,7 +22,7 @@ public class Panel extends JFrame{
             }
         }
         setResizable(false);
-        setSize(400, 400);
+        setBounds(50, 50,500,500);
         setVisible(true);
     }
 

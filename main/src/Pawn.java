@@ -5,9 +5,9 @@ public class Pawn extends Piese{
         super(x,y);
     }
     public static void createPawns(Panel frame){
-        ImageIcon icon = new ImageIcon("D:/Chessimages/blackPawn.png");
+        ImageIcon icon = new ImageIcon("D:/Сhess/images/blackPawn.png");
         JLabel lbl = new JLabel(icon);
-        lbl.setBounds(5,5,45,45);
+        lbl.setBounds(5,5,310,310);
         frame.add(lbl);
     }
 }
