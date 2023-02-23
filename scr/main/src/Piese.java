@@ -1,15 +1,16 @@
 import javax.swing.*;
 
 public class Piese extends JButton {
-    private boolean isAlive=true;
+    final static int SIZE_OF_SQUARE = 75;
+    private boolean isAlive = true;
     private boolean isWhite;
-    private char cordX,cordY;
+    private char cordX, cordY;
 
-    public Piese(Icon icon,char cordX,char cordY,boolean white) {
+    public Piese(Icon icon, char cordX, char cordY, boolean white) {
         super(icon);
-        this.cordX=cordX;
-        this.cordY=cordY;
-        this.isWhite=white;
+        this.cordX = cordX;
+        this.cordY = cordY;
+        this.isWhite = white;
     }
 
     public boolean isAlive() {
@@ -19,7 +20,6 @@ public class Piese extends JButton {
     public void setAlive(boolean alive) {
         isAlive = alive;
     }
-
 
 
     public boolean isWhite() {

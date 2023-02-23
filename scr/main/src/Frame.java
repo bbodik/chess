@@ -5,7 +5,7 @@ public class Frame extends JFrame {
     Frame() {
         super("chess");
         setLayout(null);
-        setBounds(50,50,840, 660);
+        setBounds(50, 50, 840, 660);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         add(new ChessBoardPanel());
         setVisible(true);
@@ -14,11 +14,11 @@ public class Frame extends JFrame {
 
 class ChessBoardPanel extends JPanel {
     private int size = 75;
-    private Color lightColor = Color.WHITE;
+    private Color lightColor = Color.LIGHT_GRAY;
     private Color darkColor = Color.BLACK;
 
     public ChessBoardPanel() {
-        setBounds(210,10,600,600);
+        setBounds(210, 10, 600, 600);
         setOpaque(false);
         setLayout(null);
         setVisible(true);

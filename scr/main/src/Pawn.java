@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -8,19 +9,19 @@ public class Pawn extends Piese {
     }
 
     public static void createPawns(ChessBoardPanel frame) {
-        BlackHandler hnd = new BlackHandler();
-        WhiteHandler hnd1 = new WhiteHandler();
+        BlackPawnHandler hnd = new BlackPawnHandler();
+        WhitePawnHandler hnd1 = new WhitePawnHandler();
         for (int i = 0; i < 8; i++) {
             ImageIcon icon = new ImageIcon("D:/chess/scr/images/blackPawn.png");
             Pawn pawn = new Pawn(icon, (char) (97 + i), '2', false);
-            pawn.setBounds(i * 75, 75, 75, 75);
+            pawn.setBounds(i * SIZE_OF_SQUARE, SIZE_OF_SQUARE, SIZE_OF_SQUARE, SIZE_OF_SQUARE);
             pawn.addActionListener(hnd);
             frame.add(pawn);
         }
         for (int i = 0; i < 8; i++) {
             ImageIcon icon = new ImageIcon("D:/chess/scr/images/whitePawn.png");
             Pawn pawn = new Pawn(icon, (char) (97 + i), '7', true);
-            pawn.setBounds(i * 75, 450, 75, 75);
+            pawn.setBounds(i * SIZE_OF_SQUARE, 450, SIZE_OF_SQUARE, SIZE_OF_SQUARE);
             pawn.addActionListener(hnd1);
             frame.add(pawn);
         }
@@ -28,17 +29,17 @@ public class Pawn extends Piese {
 
 }
 
-class BlackHandler implements ActionListener {
+class BlackPawnHandler implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
-        Pawn button = (Pawn) e.getSource();
-        button.setLocation(button.getX(),button.getY()+75);
+        System.out.println("omg");
     }
 }
 
-class WhiteHandler implements ActionListener {
+class WhitePawnHandler implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         System.out.println("Yeea it working");
     }
 }
+
