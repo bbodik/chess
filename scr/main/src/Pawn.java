@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class Pawn extends Piese {
     Pawn(Icon icon, char cordX, char cordY, boolean white) {
@@ -26,13 +28,12 @@ public class Pawn extends Piese {
             frame.add(pawn);
         }
     }
-
 }
 
 class BlackPawnHandler implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println("omg");
+
     }
 }
 
