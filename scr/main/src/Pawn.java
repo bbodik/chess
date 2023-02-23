@@ -11,14 +11,14 @@ public class Pawn extends Piese {
         BlackHandler hnd = new BlackHandler();
         WhiteHandler hnd1 = new WhiteHandler();
         for (int i = 0; i < 8; i++) {
-            ImageIcon icon = new ImageIcon("D:/Сhess/scr/images/blackPawn.png");
+            ImageIcon icon = new ImageIcon("D:/chess/scr/images/blackPawn.png");
             Pawn pawn = new Pawn(icon, (char) (97 + i), '2', false);
             pawn.setBounds(i * 75, 75, 75, 75);
             pawn.addActionListener(hnd);
             frame.add(pawn);
         }
         for (int i = 0; i < 8; i++) {
-            ImageIcon icon = new ImageIcon("D:/Сhess/scr/images/whitePawn.png");
+            ImageIcon icon = new ImageIcon("D:/chess/scr/images/whitePawn.png");
             Pawn pawn = new Pawn(icon, (char) (97 + i), '7', true);
             pawn.setBounds(i * 75, 450, 75, 75);
             pawn.addActionListener(hnd1);
