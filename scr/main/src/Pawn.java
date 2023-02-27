@@ -33,7 +33,8 @@ public class Pawn extends Piese {
 class BlackPawnHandler implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        Pawn pawn=(Pawn)e.getSource();
+        pawn.movePiese('b','5');
     }
 }
 

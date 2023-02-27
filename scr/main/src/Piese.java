@@ -12,6 +12,11 @@ public class Piese extends JButton {
         this.cordY = cordY;
         this.isWhite = white;
     }
+    public void movePiese(char cordX, char cordY){
+        this.cordX=cordX;
+        this.cordY=cordY;
+        this.setLocation(((int)cordX-97)*75,((int)cordY-49)*75);
+    }
 
     public boolean isAlive() {
         return isAlive;
